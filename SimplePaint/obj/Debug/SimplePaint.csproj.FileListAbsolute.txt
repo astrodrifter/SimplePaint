@@ -1,0 +1,9 @@
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\bin\Debug\SimplePaint.exe.config
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\bin\Debug\SimplePaint.exe
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\bin\Debug\SimplePaint.pdb
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\obj\Debug\SimplePaint.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\obj\Debug\SimplePaint.Properties.Resources.resources
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\obj\Debug\SimplePaint.SimplePaintForm.resources
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\obj\Debug\SimplePaint.csproj.GenerateResource.Cache
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\obj\Debug\SimplePaint.exe
+C:\Users\Student\Documents\GitHub\SimplePaint\SimplePaint\obj\Debug\SimplePaint.pdb
