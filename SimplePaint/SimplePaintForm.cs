@@ -28,6 +28,7 @@ namespace SimplePaint {
 
         public SimplePaintForm() {
             InitializeComponent();
+            InitializeWidthBox();
             New();
             // Make the ends of each line rounded.
             pen.StartCap = LineCap.Round;
@@ -77,5 +78,33 @@ namespace SimplePaint {
             userIsDrawing = false;
 
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e) {
+            // Set the colorDialog's initial color to the current pen color.
+            colorDialog.Color = pen.Color;
+
+            /* Show the colorDialog and update the pen’s color if the user clicks OK. */
+            if (colorDialog.ShowDialog() == DialogResult.OK) {
+                pen.Color = colorDialog.Color;
+            }
+
+        }
+
+        private void widthBox_SelectedIndexChanged(object sender, EventArgs e) {
+           pen.Width = (int)widthBox.SelectedItem;
+
+        }
+
+        private void InitializeWidthBox() {
+            // Create some pen widths for the user. 
+            for (int i = 1; i < 10; ++i) {
+                widthBox.Items.Add(i);
+            }
+            for (int i = 10; i <= 100; i += 10) {
+                widthBox.Items.Add(i);
+            }
+        }
+
+
     }
 }

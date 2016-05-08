@@ -66,6 +66,11 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.widthLabel = new System.Windows.Forms.ToolStripLabel();
+            this.widthBox = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -76,6 +81,8 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
             this.toolsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -318,7 +325,9 @@
             this.copyToolStripButton,
             this.pasteToolStripButton,
             this.toolStripSeparator7,
-            this.helpToolStripButton});
+            this.helpToolStripButton,
+            this.widthLabel,
+            this.widthBox});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(584, 25);
@@ -420,6 +429,31 @@
             this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
             this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseUp);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
+            this.toolStripMenuItem1.Text = "&Pen";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(48, 20);
+            this.toolStripMenuItem2.Text = "&Color";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // widthLabel
+            // 
+            this.widthLabel.Name = "widthLabel";
+            this.widthLabel.Size = new System.Drawing.Size(39, 22);
+            this.widthLabel.Text = "Width";
+            // 
+            // widthBox
+            // 
+            this.widthBox.Name = "widthBox";
+            this.widthBox.Size = new System.Drawing.Size(121, 25);
+            this.widthBox.SelectedIndexChanged += new System.EventHandler(this.widthBox_SelectedIndexChanged);
+            // 
             // SimplePaintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,6 +521,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.ToolStripLabel widthLabel;
+        private System.Windows.Forms.ToolStripComboBox widthBox;
     }
 }
 
