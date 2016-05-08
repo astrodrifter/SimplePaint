@@ -11,7 +11,9 @@ using System.Drawing.Drawing2D; // For LineCap.
 using System.IO;                // For Directory and Path.
 using System.Drawing.Imaging;   // For ImageFormat.
 using System.Diagnostics;       // For Debug.
-
+/// <summary>
+/// a change
+/// </summary>
 
 namespace SimplePaint {
     public partial class SimplePaintForm : Form {
