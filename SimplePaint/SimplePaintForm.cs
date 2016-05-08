@@ -28,6 +28,54 @@ namespace SimplePaint {
 
         public SimplePaintForm() {
             InitializeComponent();
+            New();
+            // Make the ends of each line rounded.
+            pen.StartCap = LineCap.Round;
+            pen.EndCap = LineCap.Round;
+
+        }
+        public void New() {
+            currentFilePath = "";
+            Bitmap bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
+            graphics = Graphics.FromImage(bitmap);
+            graphics.Clear(Color.White);
+            ResetImageStatus();
+            SetImage(bitmap);
+        }
+
+        private void ResetImageStatus() {
+            imageIsModified = false;
+        }
+
+        private void SetImage(Bitmap bitmap) {
+            initialBitmap = bitmap;
+            Bitmap currentBitmap = (Bitmap)initialBitmap.Clone();
+            pictureBox.Image = currentBitmap;
+            graphics = Graphics.FromImage(currentBitmap);
+        }
+
+        private void pictureBox_MouseDown(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left) {
+                userIsDrawing = true;
+                startPoint = new Point(e.X, e.Y);
+            }
+        }
+
+        private void pictureBox_MouseMove(object sender, MouseEventArgs e) {
+            if (userIsDrawing) {
+                Point endPoint = new Point(e.X, e.Y);
+                graphics.DrawLine(pen, startPoint, endPoint);
+                imageIsModified = true;
+                pictureBox.Refresh();  // Repaint the PictureBox.
+                startPoint = endPoint;  /* Set it for the next time we're called. */
+            }
+
+
+        }
+
+        private void pictureBox_MouseUp(object sender, MouseEventArgs e) {
+            userIsDrawing = false;
+
         }
     }
 }
