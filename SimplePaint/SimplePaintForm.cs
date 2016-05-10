@@ -25,6 +25,17 @@ namespace SimplePaint {
         bool imageIsModified;
         string currentFilePath;  /* Is empty, when the current image hasn't been opened or saved. */
 
+        string currentFolder = Directory.GetCurrentDirectory();
+        const string SAVE_FILE_FILTER =
+            "BMP (*.bmp)|*.bmp" +
+            "|GIF (*.gif)|*.gif" +
+            "|JPEG (*.jpg;*.jif;*.jpeg)|*.jpg;*.jif;*.jpeg" +
+            "|PNG (*.png)|*.png";
+        const string OPEN_FILE_FILTER =
+            "All image types (*.bmp *.gif *.jpg *.png)|*.bmp;*.gif;*.jpg;*.png|" +
+            SAVE_FILE_FILTER;
+
+
 
         public SimplePaintForm() {
             InitializeComponent();
@@ -105,6 +116,8 @@ namespace SimplePaint {
             }
         }
 
-
+        private void newToolStripMenuItem_Click(object sender, EventArgs e) {
+            New();
+        }
     }
 }
